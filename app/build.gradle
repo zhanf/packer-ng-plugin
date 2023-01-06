@@ -1,7 +1,8 @@
 buildscript {
-    ext.packer_version = '2.0.1-SNAPSHOT'
+    ext.packer_version = '2.0.1'
 
     repositories {
+        mavenLocal()
         maven { url '/tmp/repo/' }
         mavenCentral()
         jcenter()
@@ -10,11 +11,12 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.mcxiaoke.packer-ng:plugin:$packer_version"
+        classpath "com.mcxiaoke.packer-ng:plugin:2.0.1-SNAPSHOT"
     }
 }
 
 repositories {
+    mavenLocal()
     maven { url '/tmp/repo/' }
     mavenCentral()
     jcenter()

@@ -1,18 +1,27 @@
 ext {
     compileSdkVersion = 27
-    buildToolsVersion = "28.0.3"
+    buildToolsVersion = "29.0.2"
     minSdkVersion = 14
     targetSdkVersion = 26
 }
 
 buildscript {
     repositories {
+        mavenLocal()
+        maven { url 'http://nexus.shihuo.io/repository/maven-public/' }
         mavenCentral()
         jcenter()
         google()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:3.2.1"
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath 'com.shizhi.shihuoapp.plugin:plugin-deploy:1.0.11'
+    }
+}
+allprojects {
+    repositories {
+        mavenLocal()
+        maven { url 'http://nexus.shihuo.io/repository/maven-public/' }
     }
 }
 
